@@ -1,7 +1,7 @@
 #+TITLE: VIM
-#+SUBTITLE: talks.asynch.dev/vim
+#+SUBTITLE: talks.metaphoric.dev/vim
 #+EMAIL: b-coimbra@hotmail.com
-#+OPTIONS: toc:nil timestamp:nil num:nil
+#+OPTIONS: toc:nil timestamp:nil num:nil \n:t
 #+html_head_extra: <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 #+html_head_extra: <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 #+EXPORT_FILE_NAME: docs/vim/index.html
@@ -13,30 +13,67 @@
 
 # @@html:<i class="material-icons-outlined">calendar_today</i>@@
 
-* Timeline
+* 📅 Timeline
   :PROPERTIES:
   :reveal_background: #195756
   :END:
 
-  #+ATTR_REVEAL: :frag (appear)
-  - *ex* - /1976/
-  - *vi* - /1978/
-  - *vim* - /1991/
-
-** ⠀
+** ex - 1976
    :PROPERTIES:
-   :reveal_background: ./images/adm-3a.jpg
-   :reveal_background_size: 1800px
-   :reveal_background_trans: slide
+   :reveal_background: #0d3d3c
    :END:
 
-** ⠀
+** vi - 1978
    :PROPERTIES:
-   :reveal_background: ./images/adm-3a-keyboard.png
-   :reveal_background_size: 1500px
-   :reveal_background_trans: slide
+   :reveal_background: #083030
    :END:
 
+*** ⠀
+    :PROPERTIES:
+    :reveal_background: ./images/adm-3a.jpg
+    :reveal_background_size: 1800px
+    :reveal_background_trans: slide
+    :END:
+
+** ✰ vim - 1991
+   :PROPERTIES:
+   :reveal_background: #042424
+   :END:
+
+*** ⠀
+    :PROPERTIES:
+    :reveal_background: ./images/adm-3a-keyboard.png
+    :reveal_background_size: 1500px
+    :reveal_background_trans: slide
+    :END:
+
+** qed → ed → ex → vi → vim
+   :PROPERTIES:
+   :reveal_background: #021c1c
+   :END:
+
+* 💰 _Invest_ @@latex:\\@@ @@html:<br>@@ in your tools!
+  :PROPERTIES:
+  :reveal_background: #1a1e29
+  :END:
+
+* Exiting Vim
+
+  #+ATTR_HTML: :width 45% :align center
+  [[./images/trying-vim.webp]]
+
+** :q
+** :q!
+
+   #+ATTR_REVEAL: :frag (appear)
+   quit without saving
+
+** :wq :x
+
+   #+ATTR_REVEAL: :frag (appear)
+   save (write) and quit
+
+** ZZ ZQ
 * Modal Editing
   :PROPERTIES:
   :reveal_background: #32386E
@@ -87,12 +124,27 @@
     - G - go to bottom of file
 
 * Text Objects
-
 ** verb + noun
+*** 🄳 🅆
 
-   - *d*: delete (verb)
-   - *w*: word (noun)
+    #+ATTR_REVEAL: :frag (appear)
+   - 🄳 delete (verb)
+   - 🅆 word (noun)
 
+*** 🄲 🅆
+
+    #+ATTR_REVEAL: :frag (appear)
+   - *🄲* change (verb)
+   - 🅆 word (noun)
+
+* ~/.vimrc
+  :PROPERTIES:
+  :reveal_background: #1d1240
+  :END:
+
+* $ vimtutor
+* :help
+** :help motion
 * Macros
   :PROPERTIES:
   :reveal_background: #A767F5

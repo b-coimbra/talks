@@ -27,35 +27,80 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide" data-background="./images/background.png" data-background-opacity="0.3"><h1 class="title">VIM</h1><p class="subtitle">(talks.asynch.dev/vim)</p>
+<section id="sec-title-slide" data-background="./images/background.png" data-background-opacity="0.3"><h1 class="title">VIM</h1><p class="subtitle">(talks.metaphoric.dev/vim)</p>
 
 </section>
 
 <section>
-<section id="slide-orgba47b5e" data-background="#195756">
-<h2 id="orgba47b5e">Timeline</h2>
-<ul>
-<li class="fragment appear"><b>ex</b> - <i>1976</i></li>
-<li class="fragment appear"><b>vi</b> - <i>1978</i></li>
-<li class="fragment appear"><b>vim</b> - <i>1991</i></li>
-
-</ul>
+<section id="slide-org1c1c5b1" data-background="#195756">
+<h2 id="org1c1c5b1">📅 Timeline</h2>
+</section>
+<section id="slide-org790f34c" data-background="#0d3d3c">
+<h3 id="org790f34c">ex - 1976</h3>
 
 </section>
-<section id="slide-orgc89de0d" data-background="./images/adm-3a.jpg" data-background-size="1800px" data-background-transition="slide">
-<h3 id="orgc89de0d">⠀</h3>
+<section id="slide-orgdde90d4" data-background="#083030">
+<h3 id="orgdde90d4">vi - 1978</h3>
+</section>
+<section id="slide-orgc1875cc" data-background="./images/adm-3a.jpg" data-background-size="1800px" data-background-transition="slide">
+<h3 id="orgc1875cc">⠀</h3>
 
 </section>
-<section id="slide-orgb0262cb" data-background="./images/adm-3a-keyboard.png" data-background-size="1500px" data-background-transition="slide">
-<h3 id="orgb0262cb">⠀</h3>
+<section id="slide-org18c5376" data-background="#042424">
+<h3 id="org18c5376">✰ vim - 1991</h3>
+</section>
+<section id="slide-orgd7e13c8" data-background="./images/adm-3a-keyboard.png" data-background-size="1500px" data-background-transition="slide">
+<h3 id="orgd7e13c8">⠀</h3>
+
+</section>
+<section id="slide-orgfb3790d" data-background="#021c1c">
+<h3 id="orgfb3790d">qed → ed → ex → vi → vim</h3>
 
 </section>
 </section>
 <section>
-<section id="slide-org4cb25c0" data-background="#32386E">
-<h2 id="org4cb25c0">Modal Editing</h2>
+<section id="slide-org1da1ab8" data-background="#1a1e29">
+<h2 id="org1da1ab8">💰 <span class="underline">Invest</span>  <br> in your tools!</h2>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org9eb11e7">
+<h2 id="org9eb11e7">Exiting Vim</h2>
+
+<div id="orgace89af" class="figure">
+<p><img src="./images/trying-vim.webp" alt="trying-vim.webp" width="45%" align="center" /><br />
+</p>
+</div>
+
+</section>
+<section id="slide-orgf584034">
+<h3 id="orgf584034">:q</h3>
+</section>
+<section id="slide-org4c4eff8">
+<h3 id="org4c4eff8">:q!</h3>
 <p class="fragment (appear)">
-<b>Alterar o significado das teclas em cada modo</b>
+quit without saving<br />
+</p>
+
+</section>
+<section id="slide-orgfa6f9fd">
+<h3 id="orgfa6f9fd">:wq :x</h3>
+<p class="fragment (appear)">
+save (write) and quit<br />
+</p>
+
+</section>
+<section id="slide-orga2c5a97">
+<h3 id="orga2c5a97">ZZ ZQ</h3>
+</section>
+</section>
+<section>
+<section id="slide-orge10cbbf" data-background="#32386E">
+<h2 id="orge10cbbf">Modal Editing</h2>
+<p class="fragment (appear)">
+<b>Alterar o significado das teclas em cada modo</b><br />
 </p>
 
 <iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre><code class="klipse" >
@@ -92,54 +137,89 @@ window.klipse_settings = { selector_eval_js: ".klipse" };
 </iframe>
 
 </section>
-<section id="slide-orgec17573" data-background="#454D6B">
-<h3 id="orgec17573">Normal Mode</h3>
+<section id="slide-org9c129f3" data-background="#454D6B">
+<h3 id="org9c129f3">Normal Mode</h3>
 <p>
-As the name suggests, the majority of the time you should be in normal mode.
+As the name suggests, the majority of the time you should be in normal mode.<br />
 </p>
 
 </section>
-<section id="slide-orgb104c2e">
-<h3 id="orgb104c2e">Normal Mode - Basic Navigation</h3>
+<section id="slide-org7a70b7c">
+<h3 id="org7a70b7c">Normal Mode - Basic Navigation</h3>
 <ul>
-<li class="fragment appear">hjkl - left down up right</li>
-<li class="fragment appear">^e, ^y - scroll the window down/up</li>
-<li class="fragment appear">^d, ^u - scroll down/up half a page</li>
-<li class="fragment appear">^f, ^b - scroll forward/back a full page</li>
-<li class="fragment appear">^ - move to first non blank character in line</li>
-<li class="fragment appear">$ - move to end of line (EOL)</li>
-<li class="fragment appear">gg - go to top of file</li>
-<li class="fragment appear">G - go to bottom of file</li>
+<li class="fragment appear">hjkl - left down up right<br /></li>
+<li class="fragment appear">^e, ^y - scroll the window down/up<br /></li>
+<li class="fragment appear">^d, ^u - scroll down/up half a page<br /></li>
+<li class="fragment appear">^f, ^b - scroll forward/back a full page<br /></li>
+<li class="fragment appear">^ - move to first non blank character in line<br /></li>
+<li class="fragment appear">$ - move to end of line (EOL)<br /></li>
+<li class="fragment appear">gg - go to top of file<br /></li>
+<li class="fragment appear">G - go to bottom of file<br /></li>
 
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-org99837fd">
-<h2 id="org99837fd">Text Objects</h2>
-<div class="outline-text-2" id="text-org99837fd">
+<section id="slide-orgfce4696">
+<h2 id="orgfce4696">Text Objects</h2>
+<div class="outline-text-2" id="text-orgfce4696">
 </div>
 </section>
-<section id="slide-org8affaee">
-<h3 id="org8affaee">verb + noun</h3>
+<section id="slide-orgd666dc6">
+<h3 id="orgd666dc6">verb + noun</h3>
+<div class="outline-text-3" id="text-orgd666dc6">
+</div>
+</section>
+<section id="slide-org8b564d8">
+<h3 id="org8b564d8">🄳 🅆</h3>
 <ul>
-<li><b>d</b>: delete (verb)</li>
-<li><b>w</b>: word (noun)</li>
+<li class="fragment appear">🄳 delete (verb)<br /></li>
+<li class="fragment appear">🅆 word (noun)<br /></li>
+
+</ul>
+
+</section>
+<section id="slide-org054875c">
+<h3 id="org054875c">🄲 🅆</h3>
+<ul>
+<li class="fragment appear"><b>🄲</b> change (verb)<br /></li>
+<li class="fragment appear">🅆 word (noun)<br /></li>
 
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-org6d91260" data-background="#A767F5">
-<h2 id="org6d91260">Macros</h2>
+<section id="slide-orgc29b901" data-background="#1d1240">
+<h2 id="orgc29b901">~/.vimrc</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-org24a947c">
+<h2 id="org24a947c">$ vimtutor</h2>
+</section>
+</section>
+<section>
+<section id="slide-org3ccf855">
+<h2 id="org3ccf855">:help</h2>
+<div class="outline-text-2" id="text-org3ccf855">
+</div>
+</section>
+<section id="slide-org58784c5">
+<h3 id="org58784c5">:help motion</h3>
+</section>
+</section>
+<section>
+<section id="slide-org6879ad3" data-background="#A767F5">
+<h2 id="org6879ad3">Macros</h2>
 <p>
-<code>q&lt;letter&gt;</code> - record a macro
+<code>q&lt;letter&gt;</code> - record a macro<br />
 </p>
 
 <p>
-<code>@&lt;letter&gt;</code> - run a macro
+<code>@&lt;letter&gt;</code> - run a macro<br />
 </p>
 </section>
 </section>
