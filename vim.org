@@ -1,0 +1,103 @@
+#+TITLE: VIM
+#+SUBTITLE: talks.asynch.dev/vim
+#+EMAIL: b-coimbra@hotmail.com
+#+OPTIONS: toc:nil timestamp:nil num:nil
+#+html_head_extra: <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+#+html_head_extra: <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+#+EXPORT_FILE_NAME: docs/vim/index.html
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_TITLE_SLIDE_BACKGROUND: ./images/background.png
+#+REVEAL_TITLE_SLIDE_BACKGROUND_OPACITY: 0.3
+#+REVEAL_THEME: night
+#+REVEAL_TRANS: linear
+
+# @@html:<i class="material-icons-outlined">calendar_today</i>@@
+
+* Timeline
+  :PROPERTIES:
+  :reveal_background: #195756
+  :END:
+
+  #+ATTR_REVEAL: :frag (appear)
+  - *ex* - /1976/
+  - *vi* - /1978/
+  - *vim* - /1991/
+
+** ⠀
+   :PROPERTIES:
+   :reveal_background: ./images/adm-3a.jpg
+   :reveal_background_size: 1800px
+   :reveal_background_trans: slide
+   :END:
+
+** ⠀
+   :PROPERTIES:
+   :reveal_background: ./images/adm-3a-keyboard.png
+   :reveal_background_size: 1500px
+   :reveal_background_trans: slide
+   :END:
+
+* Modal Editing
+  :PROPERTIES:
+  :reveal_background: #32386E
+  :END:
+
+  #+ATTR_REVEAL: :frag (appear)
+  *Alterar o significado das teclas em cada modo*
+
+  #+begin_src js
+    class Cat {
+      constructor(name) {
+        this.name = name;
+      }
+
+      speak() {
+        console.log(`${this.name} makes a noise.`);
+      }
+    }
+
+    class Lion extends Cat {
+      speak() {
+        super.speak();
+        console.log(`${this.name} roars.`);
+      }
+    }
+
+    let l = new Lion('Fuzzy');
+    l.speak();
+  #+end_src
+
+** Normal Mode
+   :PROPERTIES:
+   :reveal_background: #454D6B
+   :END:
+
+   As the name suggests, the majority of the time you should be in normal mode.
+
+** Normal Mode - Basic Navigation
+
+   #+ATTR_REVEAL: :frag (appear)
+    - hjkl - left down up right
+    - ^e, ^y - scroll the window down/up
+    - ^d, ^u - scroll down/up half a page
+    - ^f, ^b - scroll forward/back a full page
+    - ^ - move to first non blank character in line
+    - $ - move to end of line (EOL)
+    - gg - go to top of file
+    - G - go to bottom of file
+
+* Text Objects
+
+** verb + noun
+
+   - *d*: delete (verb)
+   - *w*: word (noun)
+
+* Macros
+  :PROPERTIES:
+  :reveal_background: #A767F5
+  :END:
+
+  =q<letter>= - record a macro
+
+  =@<letter>= - run a macro

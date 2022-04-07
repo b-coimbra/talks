@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>VIM</title>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/night.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="./images/background.png" data-background-opacity="0.3"><h1 class="title">VIM</h1><p class="subtitle">(talks.asynch.dev/vim)</p>
+
+</section>
+
+<section>
+<section id="slide-orgba47b5e" data-background="#195756">
+<h2 id="orgba47b5e">Timeline</h2>
+<ul>
+<li class="fragment appear"><b>ex</b> - <i>1976</i></li>
+<li class="fragment appear"><b>vi</b> - <i>1978</i></li>
+<li class="fragment appear"><b>vim</b> - <i>1991</i></li>
+
+</ul>
+
+</section>
+<section id="slide-orgc89de0d" data-background="./images/adm-3a.jpg" data-background-size="1800px" data-background-transition="slide">
+<h3 id="orgc89de0d">⠀</h3>
+
+</section>
+<section id="slide-orgb0262cb" data-background="./images/adm-3a-keyboard.png" data-background-size="1500px" data-background-transition="slide">
+<h3 id="orgb0262cb">⠀</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org4cb25c0" data-background="#32386E">
+<h2 id="org4cb25c0">Modal Editing</h2>
+<p class="fragment (appear)">
+<b>Alterar o significado das teclas em cada modo</b>
+</p>
+
+<iframe style="background-color:white;" height="500px" width= "100%" srcdoc='<html><body><pre><code class="klipse" >
+<span style="color: #cc6666; font-weight: bold;">class</span> Cat <span style="color: #8c8c8c;">{</span>
+  constructor<span style="color: #93a8c6;">(</span>name<span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #d3869b;">this</span>.name = name;
+  <span style="color: #93a8c6;">}</span>
+
+  speak<span style="color: #93a8c6;">()</span> <span style="color: #93a8c6;">{</span>
+    console.log<span style="color: #b0b1a3;">(</span><span style="color: #476562;">`${this.name} makes a noise.`</span><span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+
+<span style="color: #cc6666; font-weight: bold;">class</span> Lion <span style="color: #cc6666; font-weight: bold;">extends</span> Cat <span style="color: #8c8c8c;">{</span>
+  speak<span style="color: #93a8c6;">()</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #cc6666; font-weight: bold;">super</span>.speak<span style="color: #b0b1a3;">()</span>;
+    console.log<span style="color: #b0b1a3;">(</span><span style="color: #476562;">`${this.name} roars.`</span><span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+
+<span style="color: #cc6666; font-weight: bold;">let</span> <span style="color: #83a598;">l</span> = <span style="color: #cc6666; font-weight: bold;">new</span> <span style="color: #d3869b;">Lion</span><span style="color: #8c8c8c;">(</span><span style="color: #476562;">&#39;Fuzzy&#39;</span><span style="color: #8c8c8c;">)</span>;
+l.speak<span style="color: #8c8c8c;">()</span>;
+
+</code></pre>
+<link rel= "stylesheet" type= "text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css">
+<style>
+.CodeMirror { font-size: 2em; }
+</style>
+<script>
+window.klipse_settings = { selector_eval_js: ".klipse" };
+</script>
+<script src= "https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js"></script></body></html>
+'>
+</iframe>
+
+</section>
+<section id="slide-orgec17573" data-background="#454D6B">
+<h3 id="orgec17573">Normal Mode</h3>
+<p>
+As the name suggests, the majority of the time you should be in normal mode.
+</p>
+
+</section>
+<section id="slide-orgb104c2e">
+<h3 id="orgb104c2e">Normal Mode - Basic Navigation</h3>
+<ul>
+<li class="fragment appear">hjkl - left down up right</li>
+<li class="fragment appear">^e, ^y - scroll the window down/up</li>
+<li class="fragment appear">^d, ^u - scroll down/up half a page</li>
+<li class="fragment appear">^f, ^b - scroll forward/back a full page</li>
+<li class="fragment appear">^ - move to first non blank character in line</li>
+<li class="fragment appear">$ - move to end of line (EOL)</li>
+<li class="fragment appear">gg - go to top of file</li>
+<li class="fragment appear">G - go to bottom of file</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org99837fd">
+<h2 id="org99837fd">Text Objects</h2>
+<div class="outline-text-2" id="text-org99837fd">
+</div>
+</section>
+<section id="slide-org8affaee">
+<h3 id="org8affaee">verb + noun</h3>
+<ul>
+<li><b>d</b>: delete (verb)</li>
+<li><b>w</b>: word (noun)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org6d91260" data-background="#A767F5">
+<h2 id="org6d91260">Macros</h2>
+<p>
+<code>q&lt;letter&gt;</code> - record a macro
+</p>
+
+<p>
+<code>@&lt;letter&gt;</code> - run a macro
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
