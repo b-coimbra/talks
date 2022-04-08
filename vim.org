@@ -66,6 +66,12 @@
   :PROPERTIES:
   :reveal_background: #1a1e29
   :END:
+** ⠀
+    :PROPERTIES:
+    :reveal_background: ./images/learning-curve.jpg
+    :reveal_background_size: 800px
+    :reveal_background_trans: slide
+    :END:
 
 * 🚫🖱
 ** ⠀
@@ -96,18 +102,59 @@
   :reveal_background: #32386E
   :END:
 
-  #+ATTR_REVEAL: :frag (appear)
-  *Alterar o significado das teclas em cada modo*
-
-
 ** Normal Mode
    :PROPERTIES:
    :reveal_background: #454D6B
    :END:
 
-   As the name suggests, the majority of the time you should be in normal mode.
+** Language Syntax
+*** verb + noun
+**** 🄳 🅆
 
-** Normal Mode - Basic Navigation
+     #+ATTR_REVEAL: :frag (appear)
+    - 🄳 delete (verb)
+    - 🅆 word (noun)
+
+**** 🄲 🅆
+
+     #+ATTR_REVEAL: :frag (appear)
+    - *🄲* change (verb)
+    - 🅆 word (noun)
+
+*** verbs
+
+  #+ATTR_REVEAL: :frag (appear)
+  - *d*: delete
+  - *c*: change (delete & enter insert mode)
+  - *>*: indent
+  - *y*: yank (copy)
+  - *v*: select (visually)
+
+*** motions
+
+  #+ATTR_REVEAL: :frag (appear)
+  - *w*: word (forward)
+  - *b*: back
+  - *d2w*: delete 2 words
+  - *d3j*: delete 3 lines down
+
+** text objects
+
+   #+ATTR_REVEAL: :frag (appear)
+   - *iw* 🡢 inner word
+   - *i"* 🡢 inner quotes
+   - *it* 🡢 inner tag (HTML tag)
+   - *i{* 🡢 inner brackets
+   - *ip* 🡢 inner paragraph
+
+** surround
+** searching
+
+   - *f, F*: "find" a character
+   - *t, T*: "find" until
+   - */*: search
+
+** Basic Navigation
 
    #+ATTR_REVEAL: :frag (appear)
     - hjkl - left down up right
@@ -118,29 +165,6 @@
     - $ - move to end of line (EOL)
     - gg - go to top of file
     - G - go to bottom of file
-
-* Language Syntax
-** verb + noun
-*** 🄳 🅆
-
-    #+ATTR_REVEAL: :frag (appear)
-   - 🄳 delete (verb)
-   - 🅆 word (noun)
-
-*** 🄲 🅆
-
-    #+ATTR_REVEAL: :frag (appear)
-   - *🄲* change (verb)
-   - 🅆 word (noun)
-
-* Text Objects
-
-  #+ATTR_REVEAL: :frag (appear)
-  - *iw* 🡢 inner word
-  - *i"* 🡢 inner quotes
-  - *it* 🡢 inner tag (HTML tag)
-  - *i{* 🡢 inner brackets
-  - *ip* 🡢 inner paragraph
 
 * Exiting Vim
 
@@ -159,14 +183,6 @@
    save (write) and quit
 
 ** ZZ ZQ
-* ~/.vimrc
-  :PROPERTIES:
-  :reveal_background: #1d1240
-  :END:
-
-* $ vimtutor
-* :help
-** :help motion
 * Macros
   :PROPERTIES:
   :reveal_background: #A767F5
@@ -175,3 +191,35 @@
   =q<letter>= - record a macro
 
   =@<letter>= - run a macro
+* IDE?
+  :PROPERTIES:
+  :reveal_background: #8a9c14
+  :END:
+
+** ⠀
+  :PROPERTIES:
+  :reveal_background: ./images/vim-setup-1.png
+  :reveal_background_size: 1500px
+  :reveal_background_trans: slide
+  :END:
+** Debugging
+
+   [[https://github.com/puremourning/vimspector][vimspector]]
+
+* ~/.vimrc
+  :PROPERTIES:
+  :reveal_background: #1d1240
+  :END:
+
+* $ vimtutor
+* :help
+** :help motion
+* ⠀
+  :PROPERTIES:
+  :reveal_background: ./images/vim-adventures.png
+  :reveal_background_size: 1500px
+  :reveal_background_trans: slide
+  :END:
+* neovim
+
+  [[https://neovim.io/][neovim.io]]
