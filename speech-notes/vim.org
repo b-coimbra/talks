@@ -1,5 +1,9 @@
 * Vim speech notes
 
+  - Dennis Ritchie e Ken Thompson
+
+  - Lear Siegler ADM-3A
+
   - Dar introdução histórica da ferramenta, quando foi criada e porquê (sucessão do Vi)
 
   - O Vim vem de uma longa linhagem de editores, desde os teletipos até chegar ao que a gente conhece hoje...
@@ -17,3 +21,7 @@
     explicar que o ex era um programa de comando, e o "vi" é a interface visual pra ele
 
     então na época, o vi era só um comando que iniciava o ex no modo visual
+
+
+
+  https://twobithistory.org/2018/08/05/where-vim-came-from.html

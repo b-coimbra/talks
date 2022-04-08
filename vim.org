@@ -18,6 +18,16 @@
   :reveal_background: #195756
   :END:
 
+** ed - 1969
+   :PROPERTIES:
+   :reveal_background: #0d3d3c
+   :END:
+
+*** ⠀
+
+    #+ATTR_HTML: :width 70% :align center
+    [[./images/pdp-11.jpg]]
+
 ** ex - 1976
    :PROPERTIES:
    :reveal_background: #0d3d3c
@@ -28,10 +38,17 @@
    :reveal_background: #083030
    :END:
 
-*** ⠀
+*** ADM-3A
     :PROPERTIES:
     :reveal_background: ./images/adm-3a.jpg
     :reveal_background_size: 1800px
+    :reveal_background_trans: slide
+    :END:
+
+*** ⠀
+    :PROPERTIES:
+    :reveal_background: ./images/adm-3a-keyboard.jpg
+    :reveal_background_size: 1500px
     :reveal_background_trans: slide
     :END:
 
@@ -40,14 +57,7 @@
    :reveal_background: #042424
    :END:
 
-*** ⠀
-    :PROPERTIES:
-    :reveal_background: ./images/adm-3a-keyboard.png
-    :reveal_background_size: 1500px
-    :reveal_background_trans: slide
-    :END:
-
-** qed → ed → ex → vi → vim
+** qed → ed → em → ex → vi → vim
    :PROPERTIES:
    :reveal_background: #021c1c
    :END:
@@ -57,23 +67,30 @@
   :reveal_background: #1a1e29
   :END:
 
-* Exiting Vim
+* 🚫🖱
+** ⠀
+   #+begin_src js
+     class Cat {
+       constructor(name) {
+         this.name = name;
+       }
 
-  #+ATTR_HTML: :width 45% :align center
-  [[./images/trying-vim.webp]]
+       speak() {
+         console.log(`${this.name} makes a noise.`);
+       }
+     }
 
-** :q
-** :q!
+     class Lion extends Cat {
+       speak() {
+         super.speak();
+         console.log(`${this.name} roars.`);
+       }
+     }
 
-   #+ATTR_REVEAL: :frag (appear)
-   quit without saving
+     let l = new Lion('Fuzzy');
+     l.speak();
+   #+end_src
 
-** :wq :x
-
-   #+ATTR_REVEAL: :frag (appear)
-   save (write) and quit
-
-** ZZ ZQ
 * Modal Editing
   :PROPERTIES:
   :reveal_background: #32386E
@@ -82,27 +99,6 @@
   #+ATTR_REVEAL: :frag (appear)
   *Alterar o significado das teclas em cada modo*
 
-  #+begin_src js
-    class Cat {
-      constructor(name) {
-        this.name = name;
-      }
-
-      speak() {
-        console.log(`${this.name} makes a noise.`);
-      }
-    }
-
-    class Lion extends Cat {
-      speak() {
-        super.speak();
-        console.log(`${this.name} roars.`);
-      }
-    }
-
-    let l = new Lion('Fuzzy');
-    l.speak();
-  #+end_src
 
 ** Normal Mode
    :PROPERTIES:
@@ -123,7 +119,7 @@
     - gg - go to top of file
     - G - go to bottom of file
 
-* Text Objects
+* Language Syntax
 ** verb + noun
 *** 🄳 🅆
 
@@ -137,6 +133,32 @@
    - *🄲* change (verb)
    - 🅆 word (noun)
 
+* Text Objects
+
+  #+ATTR_REVEAL: :frag (appear)
+  - *iw* 🡢 inner word
+  - *i"* 🡢 inner quotes
+  - *it* 🡢 inner tag (HTML tag)
+  - *i{* 🡢 inner brackets
+  - *ip* 🡢 inner paragraph
+
+* Exiting Vim
+
+  #+ATTR_HTML: :width 45% :align center
+  [[./images/trying-vim.webp]]
+
+** :q
+** :q!
+
+   #+ATTR_REVEAL: :frag (appear)
+   quit without saving
+
+** :wq :x
+
+   #+ATTR_REVEAL: :frag (appear)
+   save (write) and quit
+
+** ZZ ZQ
 * ~/.vimrc
   :PROPERTIES:
   :reveal_background: #1d1240
